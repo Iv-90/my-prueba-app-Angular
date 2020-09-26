@@ -1,0 +1,15 @@
+<div class="card-container">
+    <div class="card card-small">
+        <h3>prueba works!</h3>
+
+        <button [type]="tipo" [disabled]="desactivado">Titulo</button>
+        <input type="text" [(ngModel)]="titulo" (ngModelChange)="log($event)">
+        <button (click)="desactivado=!desactivado">Cambiar desactivado</button>
+        <h1>Tu Apellido Es: {{ seleccion }}</h1>
+        <select [(ngModel)]="seleccion">
+            <option value="Pekerman">Pekerman</option>
+            <option value="Queiroz">Queiroz</option>
+            <option value="Maturana">Maturana</option>
+        </select>
+    </div>
+</div>
