@@ -1,0 +1,14 @@
+<h3>login works!</h3>
+
+<div *ngif="_user.user">
+    <div>Nombre: {{ _user.user.name }}</div>
+    <div>Email: {{ _user.user.email }}</div>
+</div>
+
+<label for="user">Usuario:</label>
+<input type="text" id="user"><br>
+
+<label for="password">Contraceña:</label>
+<input type="text" id="password"><br>
+
+<button (click)="login()">Iniciar Sesion</button>
