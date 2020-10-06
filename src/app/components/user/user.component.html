@@ -1,19 +1,21 @@
-<div class="card-container">
-    <div class="card card-small">
-        <h3>user works!</h3>
 
-        <ng-container *ngIf="!isLogged; else logueado">
-            <button (click)="isLogged = true">Iniciar Sesion</button>
-
-            <button>Registrarse</button>
-            <button (click)="nivel = nivel+1">Suma Nivel</button>
-            <div>{{ nivel }}</div>
-        </ng-container>
-        <ng-template #logueado>
-            <button>Ir A Administracion</button>
-            <button>Ir A Perfil</button>
-            <button (click)="isLogged = false">Cerrar Sesion</button>
-        </ng-template>
-        <button *ngIf="nivel >= 10">Habitacion VIP</button>
+    <h1>Opciones Para Usuarios</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-8 offset-md-4">
+            <ng-container *ngIf="!isLogged; else logueado">
+                <button class="btn btn-outline-secondary" (click)="isLogged = true">Iniciar Sesion</button>
+            
+                <button class="btn btn-dark">Registrarse</button>
+                <button class="btn btn-outline-primary" (click)="nivel = nivel+1">Suma Nivel</button>
+                <div>{{ nivel }}</div>
+            </ng-container>
+            <ng-template #logueado>
+                <button class="btn btn-primary">Ir A Administracion</button>
+                <button class="btn btn-info">Ir A Perfil</button>
+                <button class="btn btn-outline-danger" (click)="isLogged = false">Cerrar Sesion</button>
+            </ng-template>
+            <button class="btn btn-success" *ngIf="nivel >= 10">Habitacion VIP</button>
+        </div>
     </div>
-</div>
+

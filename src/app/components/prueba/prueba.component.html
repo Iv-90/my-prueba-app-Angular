@@ -1,15 +1,23 @@
-<div class="card-container">
-    <div class="card card-small">
-        <h3>prueba works!</h3>
 
-        <button [type]="tipo" [disabled]="desactivado">Titulo</button>
-        <input type="text" [(ngModel)]="titulo" (ngModelChange)="log($event)">
-        <button (click)="desactivado=!desactivado">Cambiar desactivado</button>
-        <h1>Tu Apellido Es: {{ seleccion }}</h1>
-        <select [(ngModel)]="seleccion">
-            <option value="Pekerman">Pekerman</option>
-            <option value="Queiroz">Queiroz</option>
-            <option value="Maturana">Maturana</option>
-        </select>
+    <h1>Pruebas</h1>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6" style="background-color:lavender;">
+            <h1>Tu Apellido Es: <b class="text-success">{{ seleccion }}</b></h1>
+            <div class="form-group">
+                <select class="form-control" [(ngModel)]="seleccion">
+                    <option value="Pekerman">Pekerman</option>
+                    <option value="Queiroz">Queiroz</option>
+                    <option value="Maturana">Maturana</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-6" style="background-color:rgba(218, 233, 166, 0.87);">
+            <button class="btn btn-info" [type]="tipo" [disabled]="desactivado">Titulo</button><br>
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="titulo" (ngModelChange)="log($event)">
+            </div>
+            <button class="btn btn-warning" (click)="desactivado=!desactivado">Cambiar desactivado</button>
+        </div>
     </div>
-</div>
+

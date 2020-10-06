@@ -1,0 +1,7 @@
+<h1>@Input y @Output</h1>
+
+<hr>
+
+<app-personages [data]="personages" (borrar)="borrarUsuario($event)" *ngFor="let personages of usuarios"></app-personages>
+<!--<app-personages [data]="personages" *ngFor="let personages of usuarios">
+</app-personages>-->
