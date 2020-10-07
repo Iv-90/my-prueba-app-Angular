@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { UserComponent } from './components/user/user.component';
 import { PruebaComponent } from './components/prueba/prueba.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -15,6 +15,7 @@ import { DashboardUsersComponent } from './components/dashboard-users/dashboard-
 import { InitiationComponent } from './components/initiation/initiation.component';
 import { TodayComponent } from './components/today/today.component';
 import { PersonagesComponent } from './components/personages/personages.component';
+import { FormsComponent } from './components/forms/forms.component';
 
 const rutas: Routes = [
   {
@@ -59,7 +60,8 @@ const rutas: Routes = [
     DashboardUsersComponent,
     InitiationComponent,
     TodayComponent,
-    PersonagesComponent
+    PersonagesComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +71,8 @@ const rutas: Routes = [
       enableTracing: true,
       paramsInheritanceStrategy: 'always',
       useHash: true
-    })
+    }),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

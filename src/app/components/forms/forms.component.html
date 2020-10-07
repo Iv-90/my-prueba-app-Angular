@@ -1,0 +1,19 @@
+<h1>Formularios Basicos</h1>
+
+<form [formGroup]="signupForm" (ngSubmit)="enviar(signupForm.value)">
+    
+    <label>Nombre:</label>
+    <input formControlName="nombre" type="text"/>
+    <br>
+    <label>Usuario:</label>
+    <input formControlName="usuario" type="text" />
+    <br>
+    <label>Email:</label>
+    <input formControlName="email" type="email" />
+    <div *ngIf="signupForm.get('email').hasError('email') && signupForm.get('email').touched">Formato Del Email</div>
+    <br>
+    <label>Contraceña:</label>
+    <input formControlName="clave" type="password" />
+    <br>
+    <button [disabled]="signupForm.invalid" type="submit">Registrarse</button>
+</form>
