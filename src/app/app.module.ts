@@ -16,6 +16,7 @@ import { InitiationComponent } from './components/initiation/initiation.componen
 import { TodayComponent } from './components/today/today.component';
 import { PersonagesComponent } from './components/personages/personages.component';
 import { FormsComponent } from './components/forms/forms.component';
+import { MydirectiveDirective } from './directives/mydirective.directive';
 
 const rutas: Routes = [
   {
@@ -61,7 +62,8 @@ const rutas: Routes = [
     InitiationComponent,
     TodayComponent,
     PersonagesComponent,
-    FormsComponent
+    FormsComponent,
+    MydirectiveDirective
   ],
   imports: [
     BrowserModule,
